@@ -5,6 +5,7 @@ use App\Http\Controllers\PosController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\SellerController;
 use App\Http\Controllers\DefaultController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -44,6 +45,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/categories', CategoryController::class);
     Route::resource('/units', UnitController::class);
     Route::resource('/warehouses', WarehouseController::class);
+    Route::resource('/sellers', SellerController::class);
 
     // Route Products
     Route::get('/products/export', [ProductController::class, 'export'])->name('products.export');

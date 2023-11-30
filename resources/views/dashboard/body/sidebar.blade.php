@@ -90,11 +90,20 @@
                 Units
             </a>
 
+            <!-- Sidenav Heading (Warehouse)-->
             <div class="sidenav-menu-heading">Warehouse</div>
             <a class="nav-link {{ Request::is('warehouse*') ? 'active' : '' }}" href="{{ route('warehouses.index') }}">
                 <div class="nav-link-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
                 Warehouse
             </a>
+
+            <!-- Sidenav Heading (Seller)-->
+            <div class="sidenav-menu-heading">Seller</div>
+            <a class="nav-link {{ Request::is('seller*') ? 'active' : '' }}" href="{{ route('sellers.index') }}">
+                <div class="nav-link-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+                Seller
+            </a>
+            
 
             <!-- Sidenav Heading (Settings)-->
             <div class="sidenav-menu-heading">Settings</div>
