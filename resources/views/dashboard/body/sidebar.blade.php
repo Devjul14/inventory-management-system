@@ -1,6 +1,8 @@
 <nav class="sidenav shadow-right sidenav-light">
     <div class="sidenav-menu">
         <div class="nav accordion" id="accordionSidenav">
+        {{ 
+    auth()->user()->getRoleNames(); }}
             <!-- Sidenav Menu Heading (Core)-->
             <div class="sidenav-menu-heading">Core</div>
             <a class="nav-link {{ Request::is('dashboard*') ? 'active' : '' }}" href="{{ route('dashboard') }}">
@@ -74,7 +76,12 @@
                 <div class="nav-link-icon"><i class="fa-solid fa-users"></i></div>
                 Suppliers
             </a> -->
-
+                //tinggal coba di menu pake 
+                @role('writer')
+    I am a writer!
+@else
+    I am not a writer...
+@endrole
             <!-- Sidenav Heading (Products)-->
             <div class="sidenav-menu-heading">Products</div>
             <a class="nav-link {{ Request::is('products*') ? 'active' : '' }}" href="{{ route('products.index') }}">

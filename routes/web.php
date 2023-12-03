@@ -15,6 +15,7 @@ use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\WarehouseController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
