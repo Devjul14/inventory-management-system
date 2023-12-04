@@ -76,12 +76,8 @@
                 <div class="nav-link-icon"><i class="fa-solid fa-users"></i></div>
                 Suppliers
             </a> -->
-                //tinggal coba di menu pake 
-                @role('writer')
-    I am a writer!
-@else
-    I am not a writer...
-@endrole
+                
+            @role('seller')
             <!-- Sidenav Heading (Products)-->
             <div class="sidenav-menu-heading">Products</div>
             <a class="nav-link {{ Request::is('products*') ? 'active' : '' }}" href="{{ route('products.index') }}">
@@ -96,14 +92,15 @@
                 <div class="nav-link-icon"><i class="fa-solid fa-folder"></i></div>
                 Units
             </a>
-
+                
+            
             <!-- Sidenav Heading (Warehouse)-->
             <div class="sidenav-menu-heading">Warehouse</div>
             <a class="nav-link {{ Request::is('warehouse*') ? 'active' : '' }}" href="{{ route('warehouses.index') }}">
                 <div class="nav-link-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
                 Warehouse
             </a>
-
+            @else
             <!-- Sidenav Heading (Seller)-->
             <div class="sidenav-menu-heading">Seller</div>
             <a class="nav-link {{ Request::is('seller*') ? 'active' : '' }}" href="{{ route('sellers.index') }}">
@@ -118,6 +115,8 @@
                 <div class="nav-link-icon"><i class="fa-solid fa-users"></i></div>
                 Users
             </a>
+            
+            @endrole
         </div>
     </div>
 
