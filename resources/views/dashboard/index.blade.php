@@ -26,7 +26,7 @@
         </div>
     </div>
 </header>
-
+@can('warehouse_view')
 <!-- Main page content -->
 <div class="container-xl px-4 mt-n10">
     <!-- Example Colored Cards for Dashboard Demo -->
@@ -146,6 +146,7 @@
         </div>
     </div>
 </div>
+@endcan
 @endsection
 
 @push('page-scripts')
